@@ -33,15 +33,9 @@ const ProjectItem = ({ project }: { project: IProjectItem }) => {
         <p className="text-lg/6 font-semibold mt-4">{project.title}</p>
 
         <div
-          className={`flex flex-row items-center justify-center rounded-full py-[0.05] px-[0.5rem] mt-4 capitalize text-center border ${
-            project.repoType === RepoType.Private
-              ? "text-[var(--errorColor)] border-[var(--errorColor50)]"
-              : "text-[var(--successColor)] border-[var(--successColor50)]"
-          }`}
+          className={`flex flex-row items-center justify-center rounded-full py-[0.05] px-[0.5rem] mt-4 capitalize text-center border text-[var(--successColor)] border-[var(--successColor50)]`}
         >
-          <p className="text-xs/6 font-semibold">
-            {project.repoType === RepoType.Private ? "Private" : "Public"}
-          </p>
+          {project.projectType}
         </div>
 
         <Row classNames="w-full items-center justify-center mt-4 gap-2">
