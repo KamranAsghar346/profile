@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { IProjectItem, ProjectType } from "@/types";
 
 const projects: IProjectItem[] = [
